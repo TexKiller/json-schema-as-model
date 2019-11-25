@@ -64,12 +64,12 @@ ajv.addKeyword("arguments", {
       }
       const wrapper = wrap({
         args,
-        fun: fun.wrapper || fun
+        fun: fun.jsamWrapper || fun
       });
       if (key && obj && obj[key.substr(1)]) {
         obj[key.substr(1)] = fun.prototype ? wrapper : wrapper.bind(obj);
       } else {
-        fun.wrapper = wrapper;
+        fun.jsamWrapper = wrapper;
       }
       return true;
     };
@@ -93,12 +93,12 @@ ajv.addKeyword("return", {
       }
       const wrapper = wrap({
         ret,
-        fun: fun.wrapper || fun
+        fun: fun.jsamWrapper || fun
       });
       if (key && obj && obj[key.substr(1)]) {
         obj[key.substr(1)] = fun.prototype ? wrapper : wrapper.bind(obj);
       } else {
-        fun.wrapper = wrapper;
+        fun.jsamWrapper = wrapper;
       }
       return true;
     };

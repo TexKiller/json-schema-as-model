@@ -56,8 +56,8 @@ export const model = (options = {}) => {
       }
     };
     valid();
-    if (typeof value !== "undefined" && value.wrapper) {
-      return value.wrapper;
+    if (typeof value !== "undefined" && value.jsamWrapper) {
+      return value.jsamWrapper;
     } else {
       return proxify(value, valid);
     }
