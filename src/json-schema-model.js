@@ -44,7 +44,7 @@ export const model = (options = {}) => {
     }
     throw e;
   }
-  return val => {
+  const model = val => {
     const value = val;
     const valid = () => {
       if (!validate(value)) {
@@ -62,6 +62,8 @@ export const model = (options = {}) => {
       return proxify(value, valid);
     }
   };
+  model.validate = validate;
+  return model;
 };
 
 export default {
