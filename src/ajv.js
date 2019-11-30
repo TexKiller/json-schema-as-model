@@ -1,8 +1,10 @@
 import Ajv from 'ajv';
+import ajvMergePatch from 'ajv-merge-patch';
 
 const ajv = Ajv({
   extendRefs: true
 });
+ajvMergePatch(ajv);
 
 const wrap = ({
   fun,
