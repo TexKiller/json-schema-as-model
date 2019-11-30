@@ -1,6 +1,6 @@
 {
   "name": "json-schema-as-model",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library to facilitate the software modeling with JSON Schemas.",
   "main": "dist/json-schema-model.js",
   "scripts": {
