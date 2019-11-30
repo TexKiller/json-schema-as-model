@@ -1,6 +1,8 @@
 import Ajv from 'ajv';
 
-const ajv = Ajv();
+const ajv = Ajv({
+  extendRefs: true
+});
 
 const wrap = ({
   fun,
